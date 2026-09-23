@@ -561,7 +561,7 @@
           <summary>API connection</summary>
           <div class="field" style="margin-top:0.9rem;">
             <label for="apiurl">Prediction endpoint base URL</label>
-            <input type="text" id="apiurl" value="http://localhost:8000">
+            <input type="text" id="apiurl" value="https://asteroid-hazardousness-prediction-1.onrender.com">
             <p class="hint">Where your FastAPI service is running. The console calls <code class="mono">/make_prediction</code> on this address.</p>
           </div>
         </details>
@@ -662,7 +662,7 @@
       return;
     }
 
-    const base = (apiInput.value || 'http://localhost:8000').trim().replace(/\/+$/,'');
+    const base = (apiInput.value || 'https://asteroid-hazardousness-prediction-1.onrender.com').trim().replace(/\/+$/,'');
     const payload = {
       Minimum_Orbit_Intersection: parseFloat(moidInput.value),
       Absolute_Magnitude: parseFloat(magInput.value),
