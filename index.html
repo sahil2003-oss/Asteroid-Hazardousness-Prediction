@@ -557,14 +557,14 @@
           <p class="error-msg">Must be between 0 and 35.</p>
         </div>
 
-        <details class="advanced">
+      '''  <details class="advanced">
           <summary>API connection</summary>
           <div class="field" style="margin-top:0.9rem;">
             <label for="apiurl">Prediction endpoint base URL</label>
             <input type="text" id="apiurl" value="https://asteroid-hazardousness-prediction-1.onrender.com">
             <p class="hint">Where your FastAPI service is running. The console calls <code class="mono">/make_prediction</code> on this address.</p>
           </div>
-        </details>
+        </details>'''
 
         <button class="run-btn" id="runBtn">Assess trajectory</button>
 
@@ -606,6 +606,7 @@
 
 <script>
 (function(){
+  const BACKEND_URL = 'https://asteroid-hazardousness-prediction-1.onrender.com';
   const scene = document.getElementById('scene');
   const runBtn = document.getElementById('runBtn');
   const errorPanel = document.getElementById('errorPanel');
@@ -615,7 +616,6 @@
   const moidInput = document.getElementById('moid');
   const magInput = document.getElementById('mag');
   const diamInput = document.getElementById('diam');
-  const apiInput = document.getElementById('apiurl');
 
   function setFieldError(id, isError){
     document.getElementById(id).classList.toggle('error', isError);
@@ -662,7 +662,7 @@
       return;
     }
 
-    const base = (apiInput.value || 'https://asteroid-hazardousness-prediction-1.onrender.com').trim().replace(/\/+$/,'');
+    const base =BACKEND_URL;
     const payload = {
       Minimum_Orbit_Intersection: parseFloat(moidInput.value),
       Absolute_Magnitude: parseFloat(magInput.value),
