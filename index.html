@@ -557,15 +557,6 @@
           <p class="error-msg">Must be between 0 and 35.</p>
         </div>
 
-        <details class="advanced">
-          <summary>API connection</summary>
-          <div class="field" style="margin-top:0.9rem;">
-            <label for="apiurl">Prediction endpoint base URL</label>
-            <input type="text" id="apiurl" value="https://asteroid-hazardousness-prediction-1.onrender.com">
-            <p class="hint">Where your FastAPI service is running. The console calls <code class="mono">/make_prediction</code> on this address.</p>
-          </div>
-        </details>
-
         <button class="run-btn" id="runBtn">Assess trajectory</button>
 
         <div class="error-panel" id="errorPanel"></div>
