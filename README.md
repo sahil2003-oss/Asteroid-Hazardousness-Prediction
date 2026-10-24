@@ -25,6 +25,7 @@ Dealing with a heavily imbalanced asteroid hazard dataset from Kaggle, this proj
 * **Language**: Python
 * **ML Frameworks & Libraries**: scikit-learn, Numpy, Pandas, ydata-profiling
 * **Backend**: FastAPI
+* **Deployment**: Render
 
 ---
 
